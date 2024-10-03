@@ -23,6 +23,7 @@ public class ImageTasksWithConfigurationCacheTest extends QuarkusGradleWrapperTe
 
         assertTrue(buildResult.getOutput().contains("Configuration cache entry stored"));
         BuildResult buildResult3 = runGradleWrapper(projectDir, "imageBuild");
+        System.out.println("BUILD RESULT: " + buildResult3.getOutput());
         assertTrue(buildResult3.getOutput().contains("Reusing configuration cache."));
 
     }
